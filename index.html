@@ -9,34 +9,40 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
-            background-color: #f9f9f9;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+            margin: 0;
+            background-image: url('https://via.placeholder.com/1920x1080'); /* URL de tu imagen de fondo */
+            background-size: cover; /* Ajusta el tamaño para cubrir toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* Fija el fondo al desplazarse */
+            color: white; /* Texto en blanco para contraste */
+            text-shadow: 1px 1px 2px black; /* Sombra para mejor legibilidad */
         }
         button {
             margin: 10px;
             padding: 10px 20px;
-            background-color: #007BFF;
+            background-color: rgba(0, 123, 255, 0.8); /* Botón semitransparente */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: rgba(0, 86, 179, 0.8); /* Cambio de color al pasar el mouse */
         }
         .hidden {
             display: none;
         }
         form {
             margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el formulario */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
         }
         label {
             display: block;
             margin: 10px 0 5px;
+            color: black; /* Texto del formulario en negro */
         }
         input {
             width: 80%;
@@ -46,14 +52,17 @@
             border-radius: 5px;
         }
         h1, h2 {
-            color: #333;
+            color: white;
+        }
+        #contact-info, #form-section {
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para secciones */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <!-- Imagen en la parte superior -->
-    <img src="https://github.com/h54201473/tomadedatos/blob/main/polici%CC%81a.jpg" alt="Logo del Departamento del Chocó" id="header-image">
-
     <h1>Departamento del Chocó</h1>
     <p>¿Ya te matriculaste?</p>
     <button id="btn-yes">Sí</button>
