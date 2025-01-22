@@ -10,56 +10,13 @@
             text-align: center;
             padding: 20px;
             margin: 0;
-            background-image: url('https://raw.githubusercontent.com/h54201473/tomadedatos/main/policía.jpg');
+            background-image: url('tu-imagen.jpg'); /* Reemplaza 'tu-imagen.jpg' con la ruta a tu imagen */
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             color: white;
             text-shadow: 1px 1px 2px black;
         }
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: rgba(0, 123, 255, 0.8);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: rgba(0, 86, 179, 0.8);
-        }
-        .hidden {
-            display: none;
-        }
-        form {
-            margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            color: black;
-        }
-        input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        h1, h2 {
-            color: white;
-        }
-        #contact-info, #form-section {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-        }
+        /* Resto de tus estilos CSS */
     </style>
 </head>
 <body>
@@ -68,41 +25,33 @@
     <button id="btn-yes">Sí</button>
     <button id="btn-no">No</button>
 
-    <!-- Información de contacto -->
     <div id="contact-info" class="hidden">
         <h2>Información de Contacto</h2>
         <p>Teléfono: 123-456-7890</p>
         <p>Correo: info@choco.gov.co</p>
     </div>
 
-    <!-- Formulario -->
     <div id="form-section" class="hidden">
         <h2>Formulario de Registro</h2>
         <form id="registration-form">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="lastname">Apellido:</label>
-            <input type="text" id="lastname" name="lastname" required>
-
-            <label for="id">Número de Identificación:</label>
-            <input type="text" id="id" name="id" required>
-
-            <label for="phone">Teléfono:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <button type="submit">Enviar</button>
-        </form>
+            </form>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('btn-yes').addEventListener('click', () => {
-                document.getElementById('contact-info').classList.remove('hidden');
+            const contactInfo = document.getElementById('contact-info');
+            const formSection = document.getElementById('form-section');
+            const btnYes = document.getElementById('btn-yes');
+            const btnNo = document.getElementById('btn-no');
+
+            btnYes.addEventListener('click', () => {
+                contactInfo.classList.toggle('hidden');
+                formSection.classList.add('hidden');
             });
 
-            document.getElementById('btn-no').addEventListener('click', () => {
-                document.getElementById('form-section').classList.remove('hidden');
+            btnNo.addEventListener('click', () => {
+                formSection.classList.toggle('hidden');
+                contactInfo.classList.add('hidden');
             });
         });
     </script>
