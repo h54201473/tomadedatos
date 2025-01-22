@@ -5,33 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departamento del Chocó</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        .hidden { display: none; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #333;
+        }
     </style>
 </head>
 <body>
+    <!-- Imagen en la parte superior -->
+    <img src="https://via.placeholder.com/600x200" alt="Logo del Departamento del Chocó" id="header-image">
+
     <h1>Departamento del Chocó</h1>
     <p>¿Ya te matriculaste?</p>
     <button id="btn-yes">Sí</button>
     <button id="btn-no">No</button>
 
+    <!-- Información de contacto -->
     <div id="contact-info" class="hidden">
         <h2>Información de Contacto</h2>
         <p>Teléfono: 123-456-7890</p>
         <p>Correo: info@choco.gov.co</p>
     </div>
 
+    <!-- Formulario -->
     <div id="form-section" class="hidden">
         <h2>Formulario de Registro</h2>
         <form id="registration-form">
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="lastname">Apellido:</label><br>
-            <input type="text" id="lastname" name="lastname" required><br><br>
-            <label for="id">Número de Identificación:</label><br>
-            <input type="text" id="id" name="id" required><br><br>
-            <label for="phone">Teléfono:</label><br>
-            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="lastname">Apellido:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="id">Número de Identificación:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
             <button type="submit">Enviar</button>
         </form>
     </div>
@@ -49,3 +99,4 @@
     </script>
 </body>
 </html>
+
