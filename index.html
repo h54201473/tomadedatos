@@ -3,59 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Departamento de policía del Chocó - Estrategia Protección a la Adolescencia e Infancia Segura</title>
+  <title>Departamento del Chocó</title>
   <style>
-    /* Estilos generales */
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      text-align: center;
       padding: 20px;
-      background-image: url('https://github.com/h54201473/tomadedatos/blob/main/Pol.jpg?raw=true');
+      margin: 0;
+      background-image: url('https://github.com/h54201473/tomadedatos/blob/main/Pol.jpg?raw=truee'); /* Reemplaza 'tu-imagen.jpg' con la ruta a tu imagen */
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       color: black;
       text-shadow: 1px 1px 2px black;
     }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin-bottom: 10px;
-    }
-
-    /* Estilos para botones */
-    button {
-      font-size: 20px;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 5px;
-      background-color: #318534;
-      color: white;
-      cursor: pointer;
-      margin: 10px auto; /* Centra los botones horizontalmente */
-      display: block; /* Muestra los botones en una línea separada */
-    }
-
-    /* Estilos para formulario oculto */
     .hidden {
       display: none;
     }
-
-    /* Estilos para sección de contacto */
-    #contact-info {
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin: 20px auto;
-      max-width: 500px; /* Establece un ancho máximo para la sección de contacto en pantallas grandes */
+    button {
+      font-size: 20px; /* Aumenta el tamaño de la fuente */
+      padding: 15px 30px; /* Aumenta el espacio alrededor del texto */
+      border: none; /* Elimina el borde por defecto */
+      border-radius: 5px; /* Añade esquinas redondeadas */
+      background-color: #318534; /* Color verde */
+      color: white; /* Texto blanco */
+      cursor: pointer; /* Indica que es un botón al pasar el mouse */
     }
+    /* Otros estilos CSS */
   </style>
 </head>
 <body>
@@ -104,4 +78,11 @@
         formSection.classList.add('hidden');
       });
 
-      btnNo.addEventListener('click', () =>
+      btnNo.addEventListener('click', () => {
+        formSection.classList.remove('hidden');
+        contactInfo.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
