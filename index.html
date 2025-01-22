@@ -1,77 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departamento del Chocó</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-            background-image: url('https://github.com/h54201473/tomadedatos/blob/main/polici%CC%81a.jpg?raw=true'); /* Reemplaza 'tu-imagen.jpg' con la ruta a tu imagen */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: black;
-            text-shadow: 1px 1px 2px black;
-        }
-        .hidden {
-            display: none;
-        }
-        /* Otros estilos CSS */
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Departamento del Chocó</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      background-image: url('https://github.com/h54201473/tomadedatos/blob/main/policia.jpg?raw=true'); /* Reemplaza 'tu-imagen.jpg' con la ruta a tu imagen */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: black;
+      text-shadow: 1px 1px 2px black;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      font-size: 20px; /* Aumenta el tamaño de la fuente */
+      padding: 15px 30px; /* Aumenta el espacio alrededor del texto */
+      border: none; /* Elimina el borde por defecto */
+      border-radius: 5px; /* Añade esquinas redondeadas */
+      background-color: #4CAF50; /* Color verde */
+      color: white; /* Texto blanco */
+      cursor: pointer; /* Indica que es un botón al pasar el mouse */
+    }
+    /* Otros estilos CSS */
+  </style>
 </head>
 <body>
-    <h1>Departamento del Chocó</h1>
-    <p>¿Ya te matriculaste?</p>
-    <button id="btn-yes">Sí</button>
-    <button id="btn-no">No</button>
+  <h1>Departamento del Chocó</h1>
+  <p>¿Ya te matriculaste?</p>
+  <button id="btn-yes">Sí</button>
+  <button id="btn-no">No</button>
 
-    <div id="contact-info" class="hidden">
-        <h2>Información de Contacto</h2>
-        <p>Teléfono: 123-456-7890</p>
-        <p>Correo: info@choco.gov.co</p>
-    </div>
+  <div id="contact-info" class="hidden">
+    <h2>Información de Contacto</h2>
+    <p>Teléfono: 123-456-7890</p>
+    <p>Correo: info@choco.gov.co</p>
+  </div>
 
-    <div id="form-section" class="hidden">
-        <h2>Formulario de Registro</h2>
-        <form id="registration-form">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+  <div id="form-section" class="hidden">
+    <h2>Formulario de Registro</h2>
+    <form id="registration-form">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
 
-            <label for="identification">Identificación:</label>
-            <input type="text" id="identification" name="identification" required>
+      <label for="identification">Identificación:</label>
+      <input type="text" id="identification" name="identification" required>
 
-            <label for="phone">Celular:</label>
-            <input type="tel" id="phone" name="phone" required>
+      <label for="phone">Celular:</label>
+      <input type="tel" id="phone" name="phone" required>
 
-            <button type="submit">Enviar</button>
-            </form>
-    </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const contactInfo = document.getElementById('contact-info');
-            const formSection = document.getElementById('form-section');
-            const btnYes = document.getElementById('btn-yes');
-            const btnNo = document.getElementById('btn-no');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactInfo = document.getElementById('contact-info');
+      const formSection = document.getElementById('form-section');
+      const btnYes = document.getElementById('btn-yes');
+      const btnNo = document.getElementById('btn-no');
 
-            // Inicialmente, oculta ambos elementos
-            contactInfo.classList.add('hidden');
-            formSection.classList.add('hidden');
+      // Inicialmente, oculta ambos elementos
+      contactInfo.classList.add('hidden');
+      formSection.classList.add('hidden');
 
-            btnYes.addEventListener('click', () => {
-                contactInfo.classList.remove('hidden');
-                formSection.classList.add('hidden');
-            });
+      btnYes.addEventListener('click', () => {
+        contactInfo.classList.remove('hidden');
+        formSection.classList.add('hidden');
+      });
 
-            btnNo.addEventListener('click', () => {
-                formSection.classList.remove('hidden');
-                contactInfo.classList.add('hidden');
-            });
-        });
-    </script>
+      btnNo.addEventListener('click', () => {
+        formSection.classList.remove('hidden');
+        contactInfo.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
