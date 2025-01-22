@@ -16,7 +16,10 @@
             color: white;
             text-shadow: 1px 1px 2px black;
         }
-        /* Resto de tus estilos CSS */
+        .hidden {
+            display: none;
+        }
+        /* Otros estilos CSS */
     </style>
 </head>
 <body>
@@ -44,13 +47,17 @@
             const btnYes = document.getElementById('btn-yes');
             const btnNo = document.getElementById('btn-no');
 
+            // Inicialmente, oculta ambos elementos
+            contactInfo.classList.add('hidden');
+            formSection.classList.add('hidden');
+
             btnYes.addEventListener('click', () => {
-                contactInfo.classList.toggle('hidden');
+                contactInfo.classList.remove('hidden');
                 formSection.classList.add('hidden');
             });
 
             btnNo.addEventListener('click', () => {
-                formSection.classList.toggle('hidden');
+                formSection.classList.remove('hidden');
                 contactInfo.classList.add('hidden');
             });
         });
