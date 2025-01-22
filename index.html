@@ -10,31 +10,31 @@
             text-align: center;
             padding: 20px;
             margin: 0;
-            background-image: url('https://github.com/h54201473/tomadedatos/blob/main/polici%CC%81a.jpg?raw=true'); /* URL de tu imagen de fondo */
-            background-size: cover; /* Ajusta el tamaño para cubrir toda la pantalla */
-            background-position: center; /* Centra la imagen */
-            background-attachment: fixed; /* Fija el fondo al desplazarse */
-            color: white; /* Texto en blanco para contraste */
-            text-shadow: 1px 1px 2px black; /* Sombra para mejor legibilidad */
+            background-image: url('https://github.com/h54201473/tomadedatos/blob/main/polici%CC%81a.jpg?raw=true'); /* URL de la imagen */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-shadow: 1px 1px 2px black;
         }
         button {
             margin: 10px;
             padding: 10px 20px;
-            background-color: rgba(0, 123, 255, 0.8); /* Botón semitransparente */
+            background-color: rgba(0, 123, 255, 0.8);
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         button:hover {
-            background-color: rgba(0, 86, 179, 0.8); /* Cambio de color al pasar el mouse */
+            background-color: rgba(0, 86, 179, 0.8);
         }
         .hidden {
-            display: none;
+            display: none; /* Oculta las secciones por defecto */
         }
         form {
             margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el formulario */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
@@ -42,7 +42,7 @@
         label {
             display: block;
             margin: 10px 0 5px;
-            color: black; /* Texto del formulario en negro */
+            color: black;
         }
         input {
             width: 80%;
@@ -55,7 +55,7 @@
             color: white;
         }
         #contact-info, #form-section {
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para secciones */
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
@@ -71,9 +71,8 @@
     <!-- Información de contacto -->
     <div id="contact-info" class="hidden">
         <h2>Información de Contacto</h2>
-        <p>Teléfono: 321-241-2833</p>
-        <p>Correo: decho.dquibdo@policia.gov.co</p>
-        <p>https://www.policia.gov.co/contenido/departamento-policia-choco-0</p>
+        <p>Teléfono: 123-456-7890</p>
+        <p>Correo: info@choco.gov.co</p>
     </div>
 
     <!-- Formulario -->
@@ -97,12 +96,15 @@
     </div>
 
     <script>
+        // Manejadores para los botones
         document.getElementById('btn-yes').addEventListener('click', () => {
+            // Mostrar la sección de contacto y ocultar la del formulario
             document.getElementById('contact-info').classList.remove('hidden');
             document.getElementById('form-section').classList.add('hidden');
         });
 
         document.getElementById('btn-no').addEventListener('click', () => {
+            // Mostrar la sección del formulario y ocultar la de contacto
             document.getElementById('form-section').classList.remove('hidden');
             document.getElementById('contact-info').classList.add('hidden');
         });
