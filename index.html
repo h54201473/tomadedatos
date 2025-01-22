@@ -10,7 +10,7 @@
             text-align: center;
             padding: 20px;
             margin: 0;
-            background-image: url('https://github.com/h54201473/tomadedatos/blob/main/polici%CC%81a.jpg?raw=true'); /* URL de la imagen */
+            background-image: url('https://raw.githubusercontent.com/h54201473/tomadedatos/main/policía.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -30,7 +30,7 @@
             background-color: rgba(0, 86, 179, 0.8);
         }
         .hidden {
-            display: none; /* Oculta las secciones por defecto */
+            display: none;
         }
         form {
             margin-top: 20px;
@@ -95,18 +95,18 @@
         </form>
     </div>
 
-   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('btn-yes').addEventListener('click', () => {
-            document.getElementById('contact-info').classList.remove('hidden');
-            document.getElementById('form-section').classList.add('hidden');
-        });
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('btn-yes').addEventListener('click', () => {
+                document.getElementById('contact-info').classList.remove('hidden');
+                document.getElementById('form-section').classList.add('hidden');
+            });
 
-        document.getElementById('btn-no').addEventListener('click', () => {
-            document.getElementById('form-section').classList.remove('hidden');
-            document.getElementById('contact-info').classList.add('hidden');
+            document.getElementById('btn-no').addEventListener('click', () => {
+                document.getElementById('form-section').classList.remove('hidden');
+                document.getElementById('contact-info').classList.add('hidden');
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
