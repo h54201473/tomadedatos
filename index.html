@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento del Chocó</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Departamento del Chocó</h1>
+    <p>¿Ya te matriculaste?</p>
+    <button id="btn-yes">Sí</button>
+    <button id="btn-no">No</button>
+
+    <div id="contact-info" class="hidden">
+        <h2>Información de Contacto</h2>
+        <p>Teléfono: 123-456-7890</p>
+        <p>Correo: info@choco.gov.co</p>
+    </div>
+
+    <div id="form-section" class="hidden">
+        <h2>Formulario de Registro</h2>
+        <form id="registration-form">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="lastname">Apellido:</label><br>
+            <input type="text" id="lastname" name="lastname" required><br><br>
+            <label for="id">Número de Identificación:</label><br>
+            <input type="text" id="id" name="id" required><br><br>
+            <label for="phone">Teléfono:</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('btn-yes').addEventListener('click', () => {
+            document.getElementById('contact-info').classList.remove('hidden');
+            document.getElementById('form-section').classList.add('hidden');
+        });
+
+        document.getElementById('btn-no').addEventListener('click', () => {
+            document.getElementById('form-section').classList.remove('hidden');
+            document.getElementById('contact-info').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
