@@ -95,19 +95,18 @@
         </form>
     </div>
 
-    <script>
-        // Manejadores para los botones
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('btn-yes').addEventListener('click', () => {
-            // Mostrar la sección de contacto y ocultar la del formulario
             document.getElementById('contact-info').classList.remove('hidden');
             document.getElementById('form-section').classList.add('hidden');
         });
 
         document.getElementById('btn-no').addEventListener('click', () => {
-            // Mostrar la sección del formulario y ocultar la de contacto
             document.getElementById('form-section').classList.remove('hidden');
             document.getElementById('contact-info').classList.add('hidden');
         });
-    </script>
+    });
+</script>
 </body>
 </html>
