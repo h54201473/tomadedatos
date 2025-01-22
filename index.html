@@ -11,7 +11,7 @@
       text-align: center;
       padding: 20px;
       margin: 0;
-      background-image: url('https://github.com/h4201473/tomadedatos/blob/main/Pol.jpg?raw=truee'); /* Reemplaza 'tu-imagen.jpg' con la ruta a tu imagen */
+      background-image: url('https://github.com/h54201473/tomadedatos/blob/main/Pol.jpg?raw=truee');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -111,4 +111,26 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded',
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactInfo = document.getElementById('contact-info');
+      const formSection = document.getElementById('form-section');
+      const btnYes = document.getElementById('btn-yes');
+      const btnNo = document.getElementById('btn-no');
+
+      // Inicialmente, oculta ambos elementos
+      contactInfo.classList.add('hidden');
+      formSection.classList.add('hidden');
+
+      btnYes.addEventListener('click', () => {
+        contactInfo.classList.remove('hidden');
+        formSection.classList.add('hidden');
+      });
+
+      btnNo.addEventListener('click', () => {
+        formSection.classList.remove('hidden');
+        contactInfo.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
